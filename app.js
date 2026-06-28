@@ -167,7 +167,7 @@ const badgeOrder = ["Legend", "Gold", "Silver", "Bronze", "No Badge"];
 const options = ["Bullish", "Neutral", "Bearish"];
 
 const appState = {
-  lang: localStorage.getItem(STORAGE_KEYS.lang) || "ja",
+  lang: localStorage.getItem(STORAGE_KEYS.lang) || "en",
   guestId: getOrCreateGuestId(),
   vote: localStorage.getItem(STORAGE_KEYS.vote) || "",
 };
