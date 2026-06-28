@@ -1,0 +1,23 @@
+{
+  "name": "Mantle Signal Arena",
+  "short_name": "Mantle Arena",
+  "description": "Interactive Mantle ecosystem research workflow demo.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#030504",
+  "theme_color": "#00ff8a",
+  "icons": [
+    {
+      "src": "./assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
