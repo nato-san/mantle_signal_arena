@@ -292,7 +292,8 @@ function render() {
         <section class="hero-grid">
           <div class="hero-copy">
             <p class="eyebrow">${t("eyebrow")}</p>
-            <h1>${t("heroTitle")}</h1>
+            <h1>${t("appName")}</h1>
+            <p class="hero-lead">${t("heroTitle")}</p>
             <p>${t("heroCopy")}</p>
           </div>
           <aside class="status-panel" aria-label="${t("demoStatusLabel")}">
