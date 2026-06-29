@@ -47,7 +47,7 @@ Example signal categories:
 - Resolved historical demo round
 - Research summary section
 - EN / JP language toggle
-- Default Japanese UI
+- Default English UI
 - localStorage-based guest profile
 - Demo assistant character image
 - Roadmap for live API integration
@@ -79,6 +79,24 @@ No live market API, wallet connection, Supabase, Firebase, or paid backend servi
 
 This prototype is designed to demonstrate the research workflow, not to provide financial advice.
 
+## Round Rule
+
+Future live operation is intended to use a fixed UTC round schedule:
+
+- A new round starts every day at 00:00 UTC.
+- Each round has a 24-hour voting window.
+- Users vote once per round.
+- Each prediction is resolved exactly 7 days after the round starts.
+- Resolution uses the MNT snapshot price at the same UTC time, not a daily close price.
+
+Example:
+
+- Round starts: 2026-07-01 00:00 UTC
+- Voting period: 2026-07-01 00:00 UTC to 2026-07-01 23:59 UTC
+- Resolution snapshot: 2026-07-08 00:00 UTC
+
+The current MVP still runs in Demo Mode with historical sample data.
+
 ## Research Workflow
 
 Mantle Signal Arena is not a fully autonomous trading bot.
@@ -100,7 +118,7 @@ Future versions may include:
 - Live MNT price API integration
 - Nansen data integration
 - Auto-generated Mantle signal cards
-- Auto-resolved 7-day rounds
+- 24-hour voting rounds resolved 7 days later using MNT snapshot price
 - Wallet-linked reputation badges
 - Optional onchain badge system
 - Ecosystem score using price, TVL, RWA activity, and AI activity

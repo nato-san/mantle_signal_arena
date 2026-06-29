@@ -57,6 +57,7 @@ button {
 .vote-section,
 .results-panel,
 .resolved-grid,
+.round-rule-panel,
 .lower-grid,
 footer {
   margin-top: 18px;
@@ -454,6 +455,30 @@ dd {
   background: var(--green);
   color: #001a0e;
   font-weight: 950;
+}
+
+.round-rule-panel {
+  background:
+    linear-gradient(90deg, rgba(0, 255, 138, 0.11), transparent 62%),
+    rgba(11, 17, 16, 0.86);
+}
+
+.round-example {
+  margin-top: 16px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.round-example > strong {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--green);
+}
+
+.round-example dl {
+  margin-top: 0;
 }
 
 .cat-panel {

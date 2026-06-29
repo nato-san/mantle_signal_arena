@@ -59,12 +59,25 @@ const translations = {
     resolvedSummary:
       "強い流動性の成長とRWAの前向きな動きが、短期的な不確実性を上回りました。",
     catNote: "リサーチ要約を見守る小さなアシスタント",
+    roundRuleTitle: "ラウンドルール",
+    roundRuleText:
+      "各ラウンドはUTC 00:00から24時間投票できます。予想はちょうど7日後、同じUTC時刻のMNTスナップショット価格で判定されます。",
+    roundRuleBadge: "将来のライブモード",
+    roundRuleMode:
+      "これは将来のライブモードでの運用ルールです。現在のデモモードでは過去のサンプルデータを使用します。",
+    roundExampleTitle: "例",
+    roundStartLabel: "ラウンド開始",
+    votingPeriodLabel: "投票期間",
+    resolutionSnapshotLabel: "判定スナップショット",
+    roundStartValue: "2026-07-01 00:00 UTC",
+    votingPeriodValue: "2026-07-01 00:00 UTC から 2026-07-01 23:59 UTC",
+    resolutionSnapshotValue: "2026-07-08 00:00 UTC",
     roadmapTitle: "今後のロードマップ",
     roadmapItems: [
       "MNT価格APIとの連携",
       "Nansenデータ連携",
       "Mantleシグナルカードの自動生成",
-      "7日後ラウンドの自動判定",
+      "24時間投票ラウンドを7日後のMNTスナップショット価格で自動判定",
       "ウォレット連携型の評判バッジ",
       "将来的なオンチェーンバッジ化",
       "価格・TVL・RWA活動・AI活動を組み合わせたエコシステムスコア判定",
@@ -133,12 +146,25 @@ const translations = {
     resolvedSummary:
       "Strong liquidity growth and positive RWA momentum outweighed short-term uncertainty.",
     catNote: "Small assistant cat supporting the research summary",
+    roundRuleTitle: "Round Rule",
+    roundRuleText:
+      "Each round opens for 24 hours from 00:00 UTC. Predictions are resolved exactly 7 days later using the MNT snapshot price at the same UTC time.",
+    roundRuleBadge: "Future live mode",
+    roundRuleMode:
+      "This is the intended rule for future live mode. The current DEMO mode still uses historical sample data.",
+    roundExampleTitle: "Example",
+    roundStartLabel: "Round starts",
+    votingPeriodLabel: "Voting period",
+    resolutionSnapshotLabel: "Resolution snapshot",
+    roundStartValue: "2026-07-01 00:00 UTC",
+    votingPeriodValue: "2026-07-01 00:00 UTC to 2026-07-01 23:59 UTC",
+    resolutionSnapshotValue: "2026-07-08 00:00 UTC",
     roadmapTitle: "Roadmap",
     roadmapItems: [
       "Live MNT price API integration",
       "Nansen data integration",
       "Auto-generated Mantle signal cards",
-      "Auto-resolve 7-day rounds",
+      "24-hour voting rounds resolved 7 days later using MNT snapshot price",
       "Wallet-linked reputation badges",
       "Optional onchain badge system",
       "Future ecosystem score using price, TVL, RWA activity, and AI activity",
@@ -364,6 +390,34 @@ function render() {
           />
           <p>${t("catNote")}</p>
         </aside>
+      </section>
+
+      <section class="round-rule-panel plain-panel">
+        <div class="section-heading">
+          <div>
+            <h2>${t("roundRuleTitle")}</h2>
+            <p>${t("roundRuleText")}</p>
+          </div>
+          <span>${t("roundRuleBadge")}</span>
+        </div>
+        <p>${t("roundRuleMode")}</p>
+        <div class="round-example">
+          <strong>${t("roundExampleTitle")}</strong>
+          <dl>
+            <div>
+              <dt>${t("roundStartLabel")}</dt>
+              <dd>${t("roundStartValue")}</dd>
+            </div>
+            <div>
+              <dt>${t("votingPeriodLabel")}</dt>
+              <dd>${t("votingPeriodValue")}</dd>
+            </div>
+            <div>
+              <dt>${t("resolutionSnapshotLabel")}</dt>
+              <dd>${t("resolutionSnapshotValue")}</dd>
+            </div>
+          </dl>
+        </div>
       </section>
 
       <section class="lower-grid">
