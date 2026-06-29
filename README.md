@@ -2,7 +2,7 @@
 
 Mantle Signal Arena is a lightweight interactive research workflow demo built for **Mantle Research Challenge 2026 — Track 2: The Research Agent**.
 
-It transforms complex Mantle ecosystem data into simple research signals, AI-assisted summaries, and reputation-based voting results, making onchain research easier and more accessible.
+It transforms complex Mantle ecosystem data into simple research signals, AI-ready structured summaries, and reputation-based voting results, making onchain research easier and more accessible.
 
 Users review Mantle ecosystem signal cards, vote on the ecosystem outlook, and inspect how different reputation badge groups voted.
 
@@ -77,9 +77,9 @@ This aligns with Track 2 by demonstrating a reusable research workflow that othe
 
 ## AI Role
 
-AI plays a supporting role by transforming raw ecosystem data into structured research signals.
+AI is planned to play a supporting role by transforming raw ecosystem data into structured research signals.
 
-Instead of forcing users to analyze large amounts of raw information, AI-assisted summarization reduces research friction and improves accessibility.
+Instead of forcing users to analyze large amounts of raw information, AI-assisted summarization can reduce research friction and improve accessibility.
 
 In future versions, AI can automatically generate signal cards from live Mantle ecosystem data.
 
@@ -152,6 +152,8 @@ Example:
 - Resolution snapshot: 2026-07-08 00:00 UTC
 
 This design ensures fairness by giving all participants the same prediction window and evaluation timing.
+
+Current planned resolution starts with MNT snapshot price, with future ecosystem score support.
 
 ---
 
