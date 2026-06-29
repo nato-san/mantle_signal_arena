@@ -2,19 +2,37 @@
 
 Mantle Signal Arena is a lightweight interactive research workflow demo built for **Mantle Research Challenge 2026 — Track 2: The Research Agent**.
 
+It transforms complex Mantle ecosystem data into simple research signals, AI-assisted summaries, and reputation-based voting results, making onchain research easier and more accessible.
+
 Users review Mantle ecosystem signal cards, vote on the ecosystem outlook, and inspect how different reputation badge groups voted.
 
-The core workflow is:
+Core workflow:
 
-```text
-Signal Cards -> Vote -> Verify -> Reputation
-```
+**Signal Cards -> Vote -> Verify -> Reputation**
+
+---
+
+## Problem
+
+Onchain research is difficult for most users.
+
+Understanding Mantle often requires checking multiple sources such as:
+
+- Price data
+- TVL changes
+- RWA activity
+- AI / InfoFi narratives
+- Social sentiment
+
+This creates high research friction, especially for newer users.
+
+Raw data alone does not always help users form a clear market outlook.
+
+---
 
 ## Concept
 
-Onchain research is often fragmented, data-heavy, and difficult for everyday users.
-
-Mantle Signal Arena turns ecosystem research into a simple interactive flow:
+Mantle Signal Arena turns ecosystem research into a simple interactive workflow:
 
 1. Review Mantle ecosystem signals
 2. Vote Bullish / Neutral / Bearish
@@ -23,6 +41,8 @@ Mantle Signal Arena turns ecosystem research into a simple interactive flow:
 5. Understand how predictions can be verified later
 
 The goal is to make research more visual, lightweight, and participatory.
+
+---
 
 ## Why Mantle?
 
@@ -38,6 +58,33 @@ Example signal categories:
 - Ecosystem activity
 - Risk signals
 
+---
+
+## Why It Fits Track 2
+
+Mantle Signal Arena is designed as an **AI-assisted research workflow tool** for onchain finance.
+
+Instead of replacing human decision-making, it helps users:
+
+- collect ecosystem signals
+- interpret them faster
+- compare sentiment across reputation groups
+- form better research-driven opinions
+
+This aligns with Track 2 by demonstrating a reusable research workflow that others can build on.
+
+---
+
+## AI Role
+
+AI plays a supporting role by transforming raw ecosystem data into structured research signals.
+
+Instead of forcing users to analyze large amounts of raw information, AI-assisted summarization reduces research friction and improves accessibility.
+
+In future versions, AI can automatically generate signal cards from live Mantle ecosystem data.
+
+---
+
 ## Features
 
 - 3 Mantle ecosystem signal cards
@@ -47,10 +94,13 @@ Example signal categories:
 - Resolved historical demo round
 - Research summary section
 - EN / JP language toggle
-- Default English UI
+- Default English UI for global submission
+- Japanese language support for accessibility
 - localStorage-based guest profile
 - Demo assistant character image
 - Roadmap for live API integration
+
+---
 
 ## Reputation Badge System
 
@@ -63,6 +113,8 @@ Prediction accuracy determines the user badge.
 - Legend: 90%+
 
 The goal is to show not only what the crowd thinks, but also where historically accurate users are voting.
+
+---
 
 ## Demo Mode
 
@@ -79,23 +131,29 @@ No live market API, wallet connection, Supabase, Firebase, or paid backend servi
 
 This prototype is designed to demonstrate the research workflow, not to provide financial advice.
 
+Current demo rounds simulate the future live round system using historical sample data.
+
+---
+
 ## Round Rule
 
-Future live operation is intended to use a fixed UTC round schedule:
+Each round follows a fixed prediction cycle.
 
-- A new round starts every day at 00:00 UTC.
-- Each round has a 24-hour voting window.
-- Users vote once per round.
-- Each prediction is resolved exactly 7 days after the round starts.
-- Resolution uses the MNT snapshot price at the same UTC time, not a daily close price.
+- A new round starts every day at **00:00 UTC**
+- Each round remains open for voting for **24 hours**
+- Users can vote **once per round**
+- Predictions are resolved **exactly 7 days later**
+- Resolution uses the **MNT snapshot price at the same UTC time**
 
 Example:
 
-- Round starts: 2026-07-01 00:00 UTC
-- Voting period: 2026-07-01 00:00 UTC to 2026-07-01 23:59 UTC
+- Round start: 2026-07-01 00:00 UTC
+- Voting closes: 2026-07-01 23:59 UTC
 - Resolution snapshot: 2026-07-08 00:00 UTC
 
-The current MVP still runs in Demo Mode with historical sample data.
+This design ensures fairness by giving all participants the same prediction window and evaluation timing.
+
+---
 
 ## Research Workflow
 
@@ -111,6 +169,8 @@ The app helps users:
 - compare with the community
 - build reputation through accuracy
 
+---
+
 ## Roadmap
 
 Future versions may include:
@@ -122,6 +182,9 @@ Future versions may include:
 - Wallet-linked reputation badges
 - Optional onchain badge system
 - Ecosystem score using price, TVL, RWA activity, and AI activity
+- Mantle AI Agent Skills integration
+
+---
 
 ## Tech Stack
 
@@ -130,49 +193,31 @@ Future versions may include:
 - JavaScript
 - localStorage
 - Static asset hosting
-- Vercel-ready static deployment
+- Vercel deployment
+
+---
 
 ## Architecture
 
 Current MVP uses local demo data:
 
-- `demoRounds`
-- `demoVotes`
-- `demoUserHistory`
-- `priceProvider` placeholder
-- `futureApiProvider` placeholder
+- demoRounds
+- demoVotes
+- demoUserHistory
+- Future price API provider
+- Future ecosystem data provider
 
-This structure allows future live data providers to be added without redesigning the app.
+This structure allows live data providers to be added without redesigning the app.
 
-## Local Development
+---
 
-Start a local static server:
+## Usage Notice
 
-```bash
-npm run dev
-```
+This project was created for the Mantle Research Challenge submission.
 
-Then open:
+Reproduction, redistribution, or commercial reuse of the original design and assets is not permitted without permission from the author.
 
-```text
-http://127.0.0.1:5173/
-```
-
-For same-Wi-Fi mobile testing, open the host machine IP address with the same port, for example:
-
-```text
-http://192.168.x.x:5173/
-```
-
-## Deployment
-
-This app is a static MVP and can be deployed easily on Vercel.
-
-Recommended Vercel settings:
-
-- Framework Preset: Other
-- Build Command: leave empty
-- Output Directory: `.`
+---
 
 ## Disclaimer
 
@@ -182,6 +227,8 @@ It does not provide financial advice.
 
 Current data is historical sample data only and should not be treated as live market information.
 
+---
+
 ## Author
 
-Built by a Mantle community member from Japan for **Mantle Research Challenge 2026 — Track 2**.
+Built by nato-san, an independent creator from Japan, for **Mantle Research Challenge 2026 — Track 2**.
