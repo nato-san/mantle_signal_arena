@@ -25,6 +25,17 @@ export const demoRounds = [
         metricLabelKey: "signalAiMetric",
       },
     ],
+    aiSummary: {
+      labelKey: "aiSummaryDemoLabel",
+      titleKey: "aiSummaryTitleText",
+      overviewKey: "aiSummaryOverview",
+      points: [
+        "aiSummaryPointLiquidity",
+        "aiSummaryPointRwa",
+        "aiSummaryPointNarrative",
+      ],
+      cautionKey: "aiSummaryCaution",
+    },
   },
   {
     id: "mantle-track2-resolved-001",
@@ -79,6 +90,19 @@ export const priceProvider = {
       source: "demo-placeholder",
       value: null,
       note: "Future live MNT price API integration point.",
+    };
+  },
+};
+
+export const aiSummaryProvider = {
+  name: "aiSummaryProvider",
+  mode: "pre-generated-demo",
+  async getSummary(round) {
+    return {
+      source: "historical-sample-data",
+      generatedLive: false,
+      summary: round.aiSummary,
+      note: "Pre-generated demo content. Future versions may generate summaries from live Mantle ecosystem data.",
     };
   },
 };

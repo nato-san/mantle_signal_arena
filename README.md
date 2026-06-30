@@ -81,7 +81,9 @@ AI is planned to play a supporting role by transforming raw ecosystem data into 
 
 Instead of forcing users to analyze large amounts of raw information, AI-assisted summarization can reduce research friction and improve accessibility.
 
-In future versions, AI can automatically generate signal cards from live Mantle ecosystem data.
+The current MVP includes an **AI Research Summary** section, but it uses pre-generated demo content based on historical sample data. It is not live AI generation.
+
+In future versions, AI can automatically generate research summaries and signal cards from live Mantle ecosystem data.
 
 ---
 
@@ -91,6 +93,7 @@ In future versions, AI can automatically generate signal cards from live Mantle 
 - Bullish / Neutral / Bearish voting
 - Reputation badge system
 - Badge-based vote breakdown
+- AI Research Summary using pre-generated demo content
 - Resolved historical demo round
 - Research summary section
 - EN / JP language toggle
@@ -180,6 +183,7 @@ Future versions may include:
 - Live MNT price API integration
 - Nansen data integration
 - Auto-generated Mantle signal cards
+- Live AI-generated research summaries from Mantle ecosystem data
 - 24-hour voting rounds resolved 7 days later using MNT snapshot price
 - Wallet-linked reputation badges
 - Optional onchain badge system
@@ -206,6 +210,7 @@ Current MVP uses local demo data:
 - demoRounds
 - demoVotes
 - demoUserHistory
+- aiSummaryProvider for pre-generated demo summaries
 - Future price API provider
 - Future ecosystem data provider
 
